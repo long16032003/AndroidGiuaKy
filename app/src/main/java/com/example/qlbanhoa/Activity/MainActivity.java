@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData(){
-
-        databaseReference = FirebaseDatabase.getInstance().getReference("product");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference("product");
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

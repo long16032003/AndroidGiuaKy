@@ -45,10 +45,10 @@ public class CartActivity extends AppCompatActivity {
 
         CartAdapter rvAdapter  = new CartAdapter(this, this.cart);
         rcvCart.setAdapter(rvAdapter);
-        tvTotal.setText(""+this.cart.getTotalPrice());
+        tvTotal.setText("Total: $"+this.cart.getTotalPrice());
     }
 
     public void updateData(){
-        tvTotal.setText("" + this.cart.getTotalPrice());
+        tvTotal.setText("Total: $" + this.cart.getTotalPrice());
     }
 }

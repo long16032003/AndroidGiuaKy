@@ -42,7 +42,11 @@ public class Cart {
 
     public void removeCart(Product p){
         Integer quantity = cartList.getOrDefault(p.getId(), 0);
-        if (quantity <=0) return;
+        if (quantity <= 1) {
+            totalPrice -= p.getPrice();
+            cartList.remove(p.getId()); // Loại bỏ sản phẩm khỏi giỏ hàng
+            return;
+        }
         cartList.put(p.getId(), quantity - 1);
         totalPrice -= p.getPrice();
     }

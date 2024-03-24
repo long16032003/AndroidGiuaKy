@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
@@ -11,100 +12,194 @@
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/llLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:id="@+id/llLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
 
         <!-- ImageVIew to display our Course Image -->
-        <ImageView
-            android:id="@+id/imageItemCart"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:contentDescription="@string/app_name"
-            android:padding="5dp"
-            android:src="@drawable/logo" />
 
-        <!-- Text View to display Course Name -->
-        <TextView
-            android:id="@+id/idTVName"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_below="@id/imageItemCart"
-            android:text="Tên sản phẩm"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
 
-        <!-- Text VIew to display Course Rating -->
-        <!-- Image used in present in drawable folder -->
-        <TextView
-            android:id="@+id/idTVPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textAlignment="center"
-            android:layout_alignLeft="@id/imageItemCart"
-            android:drawablePadding="2dp"
-            android:textColor="@color/red_pink"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:text="$100" />
+<!--        &lt;!&ndash; Text View to display Course Name &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/idTVName"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_below="@id/imageItemCart"-->
+<!--            android:text="Tên sản phẩm"-->
 
-        <TextView
-            android:id="@+id/tvplus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:text=" + "
-            android:textSize="18dp"
-            android:textStyle="bold"
-            />
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold" />-->
 
-        <EditText
-            android:id="@+id/amount"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/white"
-            android:enabled="false"
-            android:inputType="number"
-            android:text="99"
-            android:textAlignment="center"
-            android:textStyle="italic|normal" />
-        <TextView
-            android:id="@+id/tvminus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:text=" - "
-            android:textSize="18dp"
-            android:textStyle="bold"
-            />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+<!--        &lt;!&ndash; Text VIew to display Course Rating &ndash;&gt;-->
+<!--        &lt;!&ndash; Image used in present in drawable folder &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/idTVPrice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_alignLeft="@id/imageItemCart"-->
+<!--            android:drawablePadding="2dp"-->
+<!--            android:textColor="@color/red_pink"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="16dp"-->
+<!--            android:text="$100" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvplus"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:text=" + "-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/amount"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:enabled="false"-->
+<!--            android:inputType="number"-->
+<!--            android:text="99"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="italic|normal" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvminus"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:text=" - "-->
+<!--            android:textSize="18dp"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+<!--        <View-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvLineTotal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="200"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_alignLeft="@id/imageItemCart"-->
+<!--            android:drawablePadding="2dp"-->
+<!--            android:textColor="@color/yellow"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/tvLineTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="200"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_alignLeft="@id/imageItemCart"
-            android:drawablePadding="2dp"
+            android:layout_marginEnd="16dp"
+            android:text="$0"
+            android:textSize="18dp"
             android:textColor="@color/yellow"
-            android:textStyle="bold"
-            />
+            app:layout_constraintBottom_toBottomOf="@+id/imageItemCart"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        <ImageView
+            android:id="@+id/imageItemCart"
+            android:layout_width="123dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/idTVName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Tên sản phẩm"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/imageItemCart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/idTVPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="$100"
+            android:textStyle="bold"
+            android:textColor="@color/red_pink"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/idTVName"
+            app:layout_constraintTop_toBottomOf="@+id/idTVName" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageItemCart"
+            app:layout_constraintStart_toStartOf="@+id/idTVPrice">
+
+            <TextView
+                android:id="@+id/tvminus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="-"
+                android:textStyle="bold"
+                android:textColor="@color/red_pink"
+                android:gravity="center"
+                android:background="@drawable/border_textview"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvplus"
+                app:layout_constraintStart_toEndOf="@+id/tvminus"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvplus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/border_textview"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/red_pink"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_editor_absoluteY="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

@@ -51,7 +51,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 .load(p.getImage())
                 .into(holder.idIVSSImage);
         holder.edAmount.setText("" + amount);
-        holder.tvLineTotal.setText("" + cart.getLinePrice(p));
+        holder.tvLineTotal.setText("$" + cart.getLinePrice(p));
 
         holder.tvPlus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +59,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 cart.addCart(p);
                 Integer amount = cart.cartList.get(pid);
                 holder.edAmount.setText(""+ amount );
-                holder.tvLineTotal.setText("" + cart.getLinePrice(p));
+                holder.tvLineTotal.setText("$" + cart.getLinePrice(p));
                 ((CartActivity)mContext).updateData();
             }
         });
@@ -69,7 +69,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
                 cart.removeCart(p);
                 Integer amount = cart.cartList.get(pid);
                 holder.edAmount.setText(""+ amount );
-                holder.tvLineTotal.setText("" + cart.getLinePrice(p));
+                holder.tvLineTotal.setText("$" + cart.getLinePrice(p));
                 ((CartActivity)mContext).updateData();
             }
         });
@@ -86,18 +86,18 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         public TextView txtProductName;
         public TextView txtPrice;
         public TextView tvLineTotal;
-        public EditText edAmount;
+        public TextView edAmount;
         public TextView tvPlus;
         public TextView tvMinus;
-        public LinearLayoutCompat relativeLayout;
+//        public LinearLayoutCompat relativeLayout;
         public ImageView idIVSSImage;
         public CartViewHolder(@NonNull View itemView) {
             super(itemView);
             this.txtProductName = (TextView)itemView.findViewById(R.id.idTVName);
             this.txtPrice = (TextView)itemView.findViewById(R.id.idTVPrice);
             this.idIVSSImage = (ImageView)itemView.findViewById(R.id.imageItemCart);
-            this.relativeLayout = (LinearLayoutCompat) itemView.findViewById(R.id.llLayout);
-            this.edAmount = (EditText) itemView.findViewById(R.id.amount);
+//            this.relativeLayout = (LinearLayoutCompat) itemView.findViewById(R.id.llLayout);
+            this.edAmount = (TextView) itemView.findViewById(R.id.amount);
             this.tvLineTotal = (TextView)itemView.findViewById(R.id.tvLineTotal);
             this.tvPlus = (TextView)itemView.findViewById(R.id.tvplus);
             this.tvMinus = (TextView)itemView.findViewById(R.id.tvminus);
