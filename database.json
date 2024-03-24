@@ -1,0 +1,65 @@
+{
+  "product": [
+    {
+      "description": "Cúc là lựa chọn không thể thiếu. Bởi Cúc nằm trong tứ quý “Tùng, Cúc, Trúc, Mai”, tượng trưng cho sự trường tồn, ổn định phúc khí.",
+      "id": 0,
+      "image": "https://firebasestorage.googleapis.com/v0/b/qlbanhoa.appspot.com/o/hoa-cuc-1276432.jpg?alt=media&token=7bb2736e-cd7c-4bb6-9875-b30b33e3f9e8",
+      "name": "Hoa Cúc",
+      "price": 100
+    },
+    {
+      "description": "Một chậu hoa lan vàng thể hiện sự mãnh liệt và khao khát, phong lan hồng duyên dáng nữ tính và hạnh phúc, phong lan trắng thuần khiết và sang trọng",
+      "id": 1,
+      "image": "https://firebasestorage.googleapis.com/v0/b/qlbanhoa.appspot.com/o/hoa-lan-569606.jpg?alt=media&token=5bc55963-2058-4551-aa3a-4249cdbe6f99",
+      "name": "Hoa Lan",
+      "price": 110
+    },
+    {
+      "description": "Hoa sống đời không hề tàn, đó cũng là lý do mà trong nhà của gia đình người Việt luôn có chậu hoa này vào dịp năm mới ",
+      "id": 2,
+      "image": "https://firebasestorage.googleapis.com/v0/b/qlbanhoa.appspot.com/o/song-doi-1276436.jpg?alt=media&token=65bd71cb-331a-4eaa-8ef5-fec40f0dc171",
+      "name": "Sống đời",
+      "price": 120
+    },
+    {
+      "description": "Bách hợp có nghĩa là trăm năm hòa hợp, vạn sự như ý.",
+      "id": 14,
+      "image": "https://firebasestorage.googleapis.com/v0/b/qlbanhoa.appspot.com/o/hoa-bach-hop-1276464.jpg?alt=media&token=a6293aa0-552d-4ba6-aa16-ce0adc645819",
+      "name": "Hoa bách hợp",
+      "price": 150
+    }
+  ],
+  "cart":{
+    "bYVuhceBDTVuGQn4RzJmAX9TkOz1":{
+      "1": 2,
+      "2": 1,
+      "5": 3
+    },
+    "0vJYOB8lz4S75EH0EqLXjxokLo33":{
+      "0": 2,
+      "3": 1,
+      "10": 3
+    }
+  },
+  "users": {
+    "0vJYOB8lz4S75EH0EqLXjxokLo33": {
+      "id": "0vJYOB8lz4S75EH0EqLXjxokLo33",
+      "name": "Thanh Quy",
+      "password": "123456",
+      "timestamp": 1711256182983,
+      "username": "iucobemuathu@gmail.com"
+    },
+    "bYVuhceBDTVuGQn4RzJmAX9TkOz1": {
+      "id": "bYVuhceBDTVuGQn4RzJmAX9TkOz1",
+      "password": "123456",
+      "staffname": "Gia Long",
+      "timestamp": 1711208697758,
+      "username": "longnguyengia890@gmail.com",
+      "cart": {
+        "1": 2,
+        "2": 1,
+        "5": 3
+      }
+    }
+  }
+}
