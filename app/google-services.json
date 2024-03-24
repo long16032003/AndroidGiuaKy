@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "213871958924",
+    "project_id": "qlbanhoa",
+    "storage_bucket": "qlbanhoa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213871958924:android:ce83012b5b4bbdb6ff94a9",
+        "android_client_info": {
+          "package_name": "com.example.qlbanhoa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYhiy4yJr-V9CLVhalAFe0ML-ZVSil4Mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
