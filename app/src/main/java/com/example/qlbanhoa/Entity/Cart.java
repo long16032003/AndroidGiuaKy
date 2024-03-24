@@ -28,7 +28,7 @@ public class Cart {
     }
 
     //return a product follow the position from the cart
-    public Product getProductByOrder(Integer pos){
+    public Product getProductByOrder(int pos){
         keys = cartList.keySet().toArray();
         return productRepository.getProduct(Integer.parseInt(keys[pos].toString()));
     }

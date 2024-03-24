@@ -28,7 +28,7 @@ public class ProductRepository {
         this.productList.add(p);
     }
 
-    public Product getProduct(int id){
+    public Product getProduct(Integer id){
         Product result;
         for ( Product p : productList) {
             if (id == p.getId())

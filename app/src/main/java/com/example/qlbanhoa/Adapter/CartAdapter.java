@@ -23,47 +23,6 @@ import java.util.ArrayList;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder>{
 
-//    @NonNull
-//    @Override
-//    public CartAdapter.CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        return null;
-//    }
-//
-//    @Override
-//    public void onBindViewHolder(@NonNull CartAdapter.CartViewHolder holder, int position) {
-//
-//    }
-//
-//    @Override
-//    public int getItemCount() {
-//        return 0;
-//    }
-//
-//    public static class CartViewHolder extends RecyclerView.ViewHolder {
-//        public TextView txtProductName;
-//        public TextView txtPrice;
-//        public TextView tvLineTotal;
-//        public EditText edAmount;
-//        public TextView tvPlus;
-//        public TextView tvMinus;
-//        public LinearLayoutCompat relativeLayout;
-//        public ImageView idIVSSImage;
-//
-//        public CartViewHolder(@NonNull View itemView) {
-//            super(itemView);
-//            this.txtProductName = (TextView) itemView.findViewById(R.id.idTVName);
-//            this.txtPrice = (TextView) itemView.findViewById(R.id.idTVPrice);
-//            this.idIVSSImage = (ImageView) itemView.findViewById(R.id.imageItemCart);
-//            this.relativeLayout = (LinearLayoutCompat) itemView.findViewById(R.id.llLayout);
-//            this.edAmount = (EditText) itemView.findViewById(R.id.amount);
-//            this.tvLineTotal = (TextView) itemView.findViewById(R.id.tvLineTotal);
-//            this.tvPlus = (TextView) itemView.findViewById(R.id.tvplus);
-//            this.tvMinus = (TextView) itemView.findViewById(R.id.tvminus);
-//        }
-//    }
-
-
-
     private Cart cart;
     private Context mContext;
 
@@ -87,7 +46,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         String sProductName = p.getName();
         Integer amount = cart.cartList.get(pid);
         holder.txtProductName.setText(sProductName);
-        holder.txtPrice.setText(""+p.getPrice());
+        holder.txtPrice.setText("$"+p.getPrice());
         Glide.with(mContext)
                 .load(p.getImage())
                 .into(holder.idIVSSImage);

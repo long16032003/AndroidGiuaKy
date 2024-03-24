@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         ImageView openCart = (ImageView) findViewById(R.id.openCart);
         Button btnLogout = findViewById(R.id.btnLogout);
         openCart.setOnClickListener(new View.OnClickListener() {
@@ -68,32 +69,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //Thêm vào giỏ hàng
-//        Button button_add = findViewById(R.id.btn_add_order);
-//        button_add.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                DatabaseReference Product_reference = FirebaseDatabase.getInstance().getReference().child("Product");
-//                Product_reference.addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        if(snapshot.exists()){
-//                            Product product = snapshot.getValue(Product.class);
-//                            Intent intent = new Intent(MainActivity.this, CartActivity.class);
-//                            intent.putExtra("product", product);
-//                            startActivity(intent);
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
-//            }
-//        });
         initUi();
         getListProductFromDB();
+        initData();
+    }
+
+    private void initData(){
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("product");
+        eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                listProduct.clear();
+                for (DataSnapshot itemSnapShot : snapshot.getChildren()) {
+                    Product product = itemSnapShot.getValue(Product.class);
+                    listProduct.add(product);
+                }
+                System.out.println(listProduct);
+                productRepository = new ProductRepository(listProduct);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
+
     }
     private void initUi() {
         rcvProduct = (RecyclerView) findViewById(R.id.rcvproduct);
@@ -126,10 +126,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void addProductToOrder(Product product) {
-        DatabaseReference productRef = FirebaseDatabase.getInstance().getReference().child("cart").push();
-        productRef.setValue(product);
-        Toast.makeText(MainActivity.this, "Thêm sản phẩm thành công", Toast.LENGTH_SHORT).show();
-    }
+
 
 }

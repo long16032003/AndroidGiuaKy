@@ -58,13 +58,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         String priceString = String.valueOf(price);
         holder.priceProduct.setText("$"+priceString);
 
-//        holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(view.getContext(),"click on item: "+ p.getName(), Toast.LENGTH_LONG).show();
-//            }
-//        });
-
         holder.btnAddtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,28 +69,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     private void addButtonClick(View view, Product p) {
         cart.addCart(p);
-
-//        FirebaseRe cartRef = FirebaseDatabase.getInstance().getReference("cart").child(user.getId());
-//
-//        // Lắng nghe sự thay đổi dữ liệu từ Firebase
-//        cartRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                cartItems.clear();
-//                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-//                    String productId = snapshot.getKey();
-//                    Integer quantity = snapshot.getValue(Integer.class);
-//                    cartItems.add(new CartItem(productId, quantity));
-//                }
-//                notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                // Xử lý lỗi nếu có
-//            }
-//        });
-
         showSnackbar(view, mContext.getString(R.string.add_product) + p.getName(), Snackbar.LENGTH_SHORT);
     }
 
