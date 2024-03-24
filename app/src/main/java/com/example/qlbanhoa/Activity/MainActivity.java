@@ -85,15 +85,12 @@ public class MainActivity extends AppCompatActivity {
                     Product product = itemSnapShot.getValue(Product.class);
                     listProduct.add(product);
                 }
-                System.out.println(listProduct);
                 productRepository = new ProductRepository(listProduct);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
-
-
     }
     private void initUi() {
         rcvProduct = (RecyclerView) findViewById(R.id.rcvproduct);
