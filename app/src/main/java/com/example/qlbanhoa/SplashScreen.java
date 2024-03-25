@@ -24,9 +24,9 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 Intent intent;
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                ProgressBar progressBar = findViewById(R.id.progressBar);
-                int progress = 50; // Giá trị tiến trình (từ 0 đến 100)
-                progressBar.setProgress(progress);
+//                ProgressBar progressBar = findViewById(R.id.progressBar);
+//                int progress = 50; // Giá trị tiến trình (từ 0 đến 100)
+//                progressBar.setProgress(progress);
                 if(user != null){
                     intent = new Intent(SplashScreen.this, MainActivity.class);
                 }else{

@@ -11,35 +11,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/background_pink">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageView"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/logo"
-                app:civ_border_color="@color/red_pink"
-                app:civ_border_width="3dp" />
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="@android:style/Widget.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="0" />
-
-        </RelativeLayout>
+        android:background="@drawable/background_coin">
+<!--            <ProgressBar-->
+<!--                android:id="@+id/progressBar"-->
+<!--                style="@android:style/Widget.ProgressBar.Horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:layout_marginStart="32dp"-->
+<!--                android:layout_marginEnd="32dp"-->
+<!--                android:indeterminate="false"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:max="100"-->
+<!--                android:progress="0" />-->
 
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

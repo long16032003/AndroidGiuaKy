@@ -32,7 +32,7 @@
                     android:layout_weight="1"
                     android:textSize="28dp"
                     android:textStyle="bold"
-                    android:text=" Product"
+                    android:text=" Bracelet"
                     android:drawableStart="@drawable/quality_badge_star_icon"/>
                 <ImageView
                     android:id="@+id/openCart"
